@@ -1,0 +1,16 @@
+const config = {
+    printWidth: 120,
+    tabWidth: 4,
+    useTabs: false,
+    semi: false,
+    singleQuote: true,
+    quoteProps: 'as-needed',
+    trailingComma: 'all',
+    bracketSpacing: true,
+    objectWrap: 'preserve',
+    bracketSameLine: false,
+    arrowParens: 'always',
+    endOfLine: 'lf',
+}
+
+export default config
