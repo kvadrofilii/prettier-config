@@ -1,6 +1,6 @@
 {
     "name": "@michael-yakovlev/prettier-config",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "type": "module",
     "license": "MIT",
     "author": "Michael Yakovlev",
@@ -30,7 +30,7 @@
         "url": "git+https://github.com/kvadrofilii/prettier-config.git"
     },
     "packageManager": "pnpm@10.14.0",
-    "devDependencies": {
+    "dependencies": {
         "prettier": "^3.6.2"
     },
     "peerDependencies": {
