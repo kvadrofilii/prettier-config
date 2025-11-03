@@ -2,7 +2,7 @@
 
 Простая конфигурация в npm-пакете.
 
-# Быстрый старт
+## Быстрый старт
 
 Если у вас уже настроен "Prettier", просто установите и используйте:
 
@@ -16,7 +16,7 @@ npm install --save-dev @michael-yakovlev/prettier-config
 "prettier": "@michael-yakovlev/prettier-config",
 ```
 
-# Детали конфигурации
+## Детали конфигурации
 
 ```js
 {
@@ -37,11 +37,11 @@ npm install --save-dev @michael-yakovlev/prettier-config
 
 [Ознакомьтесь с документацией "Prettier" для получения дополнительной информации о конфигурациях общего доступа](https://prettier.io/docs/sharing-configurations).
 
-# Настройка в 3 этапа
+## Настройка в 3 этапа
 
 Инструкции, если вы никогда раньше не пользовались "Prettier".
 
-## 1. Установите Prettier
+### 1. Установите Prettier
 
 "Prettier" должен быть установлен как dev-зависимость
 
@@ -49,7 +49,7 @@ npm install --save-dev @michael-yakovlev/prettier-config
 npm install --save-dev --save-exact prettier
 ```
 
-## 2. Установите пакет и обновите файл package.json
+### 2. Установите пакет и обновите файл package.json
 
 Установите пакет с помощью `npm` (или `yarn`, или `pnpm`)
 
@@ -73,7 +73,7 @@ index 2ecef3d..260838f 100644
    "main": "index.js"
 ```
 
-## 3. Настройка VSCode
+### 3. Настройка VSCode
 
 Чтобы использовать "Prettier" в VSCode нужно установить плагин [Prettier - Code formatter](https://github.com/prettier/prettier-vscode):
 
@@ -93,4 +93,23 @@ ext install esbenp.prettier-vscode
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
 }
+```
+
+## Расширение конфигурации
+
+Чтобы расширить конфигурацию и перезаписать некоторые свойства из конфигурации, импортируйте в файл `.prettierrc.mjs` конфиг и экспортируйте изменения, например:
+
+```js
+// .prettierrc.mjs
+import prettierConfig from '@michael-yakovlev/prettier-config'
+
+/**
+ * @type {import("prettier").Config}
+ */
+const config = {
+    ...prettierConfig,
+    tabWidth: 2,
+}
+
+export default config
 ```
